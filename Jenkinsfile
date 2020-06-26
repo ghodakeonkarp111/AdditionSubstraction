@@ -16,5 +16,11 @@ pipeline {
                 bat "mvn package" 
             }
         }
+		stage('Generate Mail') { 
+            steps {
+               mail bcc: '', body: 'Sample body', cc: '', from: '', replyTo: '', subject: 'Sample Subject', to: 'ghodakeonkarp111@gmail.com'
+            }
+        }
+		
     }
 }
