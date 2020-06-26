@@ -1,0 +1,30 @@
+pipeline {
+    agent any 
+    environment {
+       env.PATH = env.PATH + ";c:\\Windows\\System32"
+   }
+	
+	
+	stages {
+        stage('Clean') { 
+            steps {
+                bat "mvn clean"
+            }
+        }
+        stage('Test') { 
+            steps {
+               bat "mvn test"
+            }
+        }
+        stage('Package') { 
+            steps {
+                bat "mvn package" 
+            }
+        }
+		 stage('generate mail') { 
+            steps {
+                mail bcc: '', body: 'Sample Body', cc: '', from: '', replyTo: '', subject: 'Sample Subject', to: 'ghodakeonkarp111@gmail.com'
+            }
+        }
+    }
+}
