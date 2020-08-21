@@ -2,7 +2,7 @@ package com.maven.tests;
 
 public class JenkinsCalculator {
 
-	//Method to add 2 numbers
+	//Method to add 2 number
 	public int addNumbers(int numberOne,int numberTwo)
 	{
 		return numberOne+numberTwo;
