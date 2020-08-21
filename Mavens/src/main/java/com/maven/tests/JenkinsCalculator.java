@@ -16,5 +16,11 @@ public class JenkinsCalculator {
 		{
 			return numberOne-numberTwo;
 		}
+	public int multiply(int numberOne,int numberTwo)
+	{
+		return numberOne+numberTwo;
+	}
+	
+	
 		
 }
